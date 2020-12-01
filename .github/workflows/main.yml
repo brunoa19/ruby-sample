@@ -27,7 +27,9 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Install Shipa CI
-        run: pip install shipa-ci
+        run: |
+          apt-get -yq update && apt-get install -y python-dev python-pip 
+          pip install shipa-ci
 
       # Runs a set of commands using the runners shell
       - name: Deploy app to Shipa
