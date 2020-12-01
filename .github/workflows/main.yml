@@ -28,7 +28,8 @@ jobs:
       # Runs a single command using the runners shell
       - name: Install Shipa CI
         run: |
-          apt-get -yq update && pip install --user wheel
+          sudo apt-get -yq update
+          pip install wheel
           pip install shipa-ci
 
       # Runs a set of commands using the runners shell
