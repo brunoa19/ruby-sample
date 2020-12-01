@@ -31,8 +31,5 @@ jobs:
           sudo apt-get -yq update
           pip install wheel
           pip install shipa-ci
-
-      # Runs a set of commands using the runners shell
-      - name: Deploy app to Shipa
-        run: |
           shipa-ci --server=${{ secrets.SHIPASERVER }} --email=${{ secrets.SHIPAEMAIL }} --password=${{ secrets.SHIPAPASSWORD }} --ca="${{ secrets.CA }}" app deploy --app=gitactions
+          
